@@ -1,0 +1,142 @@
+[
+  {
+    "service_id": "011",
+    "title": "A Journey Through History",
+    "image": "https://i.postimg.cc/CxPvRD8T/ad.png",
+    "short_description": "Explore the depths of historical events that shaped civilizations.",
+    "category": "History"
+  },
+  {
+    "service_id": "012",
+    "title": "Gastronomic Delights",
+    "image": "https://i.postimg.cc/PrBJTV6B/artistic.png",
+    "short_description": "Savor the flavors of diverse cuisines and culinary adventures.",
+    "category": "Food"
+  },
+  {
+    "service_id": "013",
+    "title": "Tech Trends Unveiled",
+    "image": "https://i.postimg.cc/xTqN0z9b/book.png",
+    "short_description": "Stay updated on the latest technological innovations and trends.",
+    "category": "Technology"
+  },
+  {
+    "service_id": "014",
+    "title": "Mindful Living",
+    "image": "https://i.postimg.cc/RC7Xc2tT/creative.png",
+    "short_description": "Embrace a mindful lifestyle for inner peace and well-being.",
+    "category": "Lifestyle"
+  },
+  {
+    "service_id": "015",
+    "title": "Adventure Awaits",
+    "image": "https://i.postimg.cc/0NCyGk8s/delights.png",
+    "short_description": "Embark on thrilling adventures and discover the joy of the outdoors.",
+    "category": "Adventure"
+  },
+  {
+    "service_id": "016",
+    "title": "Creative Corner",
+    "image": "https://i.postimg.cc/1zy93kDY/dish.png",
+    "short_description": "Unleash your creativity with inspiring artistic endeavors and projects.",
+    "category": "Creativity"
+  },
+  {
+    "service_id": "017",
+    "title": "Wellness Wonders",
+    "image": "https://i.postimg.cc/JzDXQBgW/fashion.png",
+    "short_description": "Discover holistic wellness practices for a balanced and healthy life.",
+    "category": "Wellness"
+  },
+  {
+    "service_id": "018",
+    "title": "Bookworm's Haven",
+    "image": "https://i.postimg.cc/tCfZ74gv/green.png",
+    "short_description": "Dive into captivating stories and literary masterpieces.",
+    "category": "Books"
+  },
+  {
+    "service_id": "019",
+    "title": "Fashion Forward",
+    "image": "https://i.postimg.cc/qqDtskxR/health.png",
+    "short_description": "Explore the latest fashion trends and style inspirations.",
+    "category": "Fashion"
+  },
+  {
+    "service_id": "020",
+    "title": "Travel Tales",
+    "image": "https://i.postimg.cc/Znb3Pskf/journey.png",
+    "short_description": "Embark on virtual journeys and gather travel inspiration.",
+    "category": "Travel"
+  },
+  {
+    "service_id": "021",
+    "title": "Fitness Fables",
+    "image": "https://i.postimg.cc/zfYyS2Kn/mindful.png",
+    "short_description": "Achieve fitness goals with expert advice and motivational stories.",
+    "category": "Fitness"
+  },
+  {
+    "service_id": "022",
+    "title": "Movie Magic",
+    "image": "https://i.postimg.cc/6qqq5kxN/music.png",
+    "short_description": "Explore the enchanting world of cinema and movie recommendations.",
+    "category": "Movies"
+  },
+  {
+    "service_id": "023",
+    "title": "Science Wonders",
+    "image": "https://i.postimg.cc/dVjh6mBp/pet.png",
+    "short_description": "Dive into the marvels of science and technological breakthroughs.",
+    "category": "Science"
+  },
+  {
+    "service_id": "024",
+    "title": "Pet Paradise",
+    "image": "https://i.postimg.cc/g04GXgDc/science.png",
+    "short_description": "Celebrate the joys of pet ownership and discover pet care tips.",
+    "category": "Pets"
+  },
+  {
+    "service_id": "025",
+    "title": "Green Living",
+    "image": "https://i.postimg.cc/fWV0sdzS/tales.png",
+    "short_description": "Embrace eco-friendly practices for a sustainable and green lifestyle.",
+    "category": "Environment"
+  },
+  {
+    "service_id": "026",
+    "title": "Artistic Escapes",
+    "image": "https://i.postimg.cc/1t2XXWmn/tech.png",
+    "short_description": "Immerse yourself in the world of art and discover artistic escapes.",
+    "category": "Art"
+  },
+  {
+    "service_id": "027",
+    "title": "Parenting Perspectives",
+    "image": "https://i.postimg.cc/bdXPcWzg/travel.png",
+    "short_description": "Gain insights into the world of parenting and family dynamics.",
+    "category": "Parenting"
+  },
+  {
+    "service_id": "028",
+    "title": "DIY Delights",
+    "image": "https://i.postimg.cc/C1QYJdXW/walk.png",
+    "short_description": "Embark on creative do-it-yourself projects for a personalized touch.",
+    "category": "DIY"
+  },
+  {
+    "service_id": "029",
+    "title": "Celestial Wonders",
+    "image": "https://i.postimg.cc/gJXcCvVY/Wellness.png",
+    "short_description": "Explore the mysteries of the cosmos and celestial wonders.",
+    "category": "Space"
+  },
+  {
+    "service_id": "030",
+    "title": "Mental Health Matters",
+    "image": "https://i.postimg.cc/T1bwDr1k/wonders.png",
+    "short_description": "Promote mental well-being with insights and strategies for a healthy mind.",
+    "category": "Mental Health"
+  }
+]
