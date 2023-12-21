@@ -25,12 +25,8 @@ const SignUp = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
-                {/* <div className="w-1/2 mr-12">
-                    <img src={img} alt="" />
-                </div> */}
-                <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+        <div className="hero min-h-screen bg-base-200 py-10">
+                <div className="card shrink-0 w-full max-w-xl shadow-2xl bg-base-100">
                     <div className="card-body">
                         <h1 className="text-3xl text-center font-bold">Sign up</h1>
                         <form onSubmit={handleSignUp}>
@@ -63,7 +59,6 @@ const SignUp = () => {
                             <Link to='/login' className='text-orange-600 font-bold'> Please Login</Link>
                         </p>
                     </div>
-                </div>
             </div>
         </div>
     );

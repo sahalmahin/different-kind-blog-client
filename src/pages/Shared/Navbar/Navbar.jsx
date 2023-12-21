@@ -58,12 +58,12 @@ const Navbar = () => {
                     user?.email ?
                         <>
                             <div>
-                                <p className="font-bold border p-1 rounded-lg">{user.email}</p>
+                                {/* <p className="font-bold border p-1 rounded-lg">{user.email}</p> */}
                             </div>
                             <div>
                                 <img className="rounded-full w-12 h-12 ml-1" alt="" src='https://rb.gy/cwptut' />
                             </div>
-                            <button className="font-bold text-lg text-slate-600" onClick={handleLogout}>Log out</button>
+                            <button className="font-bold text-lg text-slate-600 mx-2" onClick={handleLogout}>Log out</button>
                         </>
                         :
                         <>
@@ -72,7 +72,7 @@ const Navbar = () => {
                                     <img alt="" src='https://i.postimg.cc/nVqxVd0Y/user.png' />
                                 </div>
                             </label>
-                            <Link className="font-bold text-lg text-slate-600" to='/login'>Login</Link>
+                            <Link className="font-bold text-lg mx-4 text-slate-600" to='/login'>Login</Link>
                         </>
                 }
                 <div className="ml-1">

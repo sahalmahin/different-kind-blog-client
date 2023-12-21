@@ -3,7 +3,7 @@ const BlogsCard = ({ blog }) => {
     const { title, image, short_description, category } = blog;
 
     const handleAddBlog = () => {
-        fetch('http://localhost:5000/singleBlog', {
+        fetch(`http://localhost:5000/singleBlog/${blog._id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -27,10 +27,7 @@ const BlogsCard = ({ blog }) => {
                 <p>{category}</p>
                 <div className="card-actions justify-end">
                     <button className="btn btn-outline">Details</button>
-                    <button onClick={handleAddBlog} className="btn btn-outline">Wishlist</button>
-                    {/* <Link to={`/wishList${_id}`}>
-                        <button className="btn btn-outline">Wishlist</button>
-                    </Link> */}
+                    <button onClick={() => handleAddBlog(blog)} className="btn btn-outline">Wishlist</button>
                 </div>
             </div>
         </div>
