@@ -15,7 +15,7 @@ const NewsLetter = () => {
     }
 
     return (
-        <div className="my-60">
+        <div className="my-32">
             <h3 className="text-5xl font-bold text-center">News Letter</h3>
             <div className="flex items-center justify-center mt-16">
                 <form onSubmit={handleSubmit}>
