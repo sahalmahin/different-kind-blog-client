@@ -30,6 +30,7 @@ const Navbar = () => {
         <li><Link to='/addBlog'>Add Blog</Link></li>
         <li><Link to='/allBlogs'>All Blogs</Link></li>
         <li><Link to='/featuredBlogs'>Featured Blogs</Link></li>
+        <li><Link to='/wishList'>Wishlist</Link></li>
     </>
 
     return (
