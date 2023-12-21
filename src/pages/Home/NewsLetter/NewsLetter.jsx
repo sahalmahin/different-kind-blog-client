@@ -1,3 +1,6 @@
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const NewsLetter = () => {
 
     const handleSubmit = e => {
@@ -5,6 +8,10 @@ const NewsLetter = () => {
         const form = event.target;
         const email = form.email.value;
         console.log(email);
+        if (email) {
+         toast('Thank you for subscribing to our newsletter');
+         form.reset();
+        }
     }
 
     return (
@@ -20,6 +27,7 @@ const NewsLetter = () => {
                     </div>
                 </form>
             </div>
+            <ToastContainer />
         </div>
     );
 };
