@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const BlogsCard = ({ blog }) => {
 
-    const { title, image, short_description, category } = blog;
+    const { title, image, short_description, category, _id } = blog;
 
     const handleAddBlog = () => {
         fetch('http://localhost:5000/singleBlog', {
@@ -16,7 +17,7 @@ const BlogsCard = ({ blog }) => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.insertedId){
+                if (data.insertedId) {
                     toast('Added Successfully');
                 }
             })
@@ -32,7 +33,9 @@ const BlogsCard = ({ blog }) => {
                 <p>{short_description}</p>
                 <p>{category}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-outline">Details</button>
+                    <Link to={`/blogDetail/${_id}`}>
+                        <button className="btn btn-outline">Details</button>
+                    </Link>
                     <button onClick={handleAddBlog} className="btn btn-outline">Wishlist</button>
                 </div>
             </div>
