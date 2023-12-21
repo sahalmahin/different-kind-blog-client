@@ -1,9 +1,8 @@
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
 
-const BlogsCard = ({ blog }) => {
+const AllBlogsCard = ({ allBlog }) => {
 
-    const { title, image, short_description, category } = blog;
+    const { title, image, short_description, category } = allBlog;
 
     const handleAddBlog = () => {
         fetch('http://localhost:5000/singleBlog', {
@@ -11,7 +10,7 @@ const BlogsCard = ({ blog }) => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(blog)
+            body: JSON.stringify(allBlog)
         })
             .then(res => res.json())
             .then(data => {
@@ -21,11 +20,13 @@ const BlogsCard = ({ blog }) => {
                 }
             })
     }
-
+    
     return (
         <div className="card w-96 bg-base-100 shadow-xl">
-            <figure><img className="w-full h-44" src={image} /></figure>
-            <div className="card-body">
+            <figure className="px-10 pt-10">
+                <img src={image} alt="Shoes" className="rounded-xl w-full h-44" />
+            </figure>
+            <div className="card-body items-center text-center">
                 <h2 className="card-title">
                     <div className="badge badge-secondary">{title}</div>
                 </h2>
@@ -41,4 +42,4 @@ const BlogsCard = ({ blog }) => {
     );
 };
 
-export default BlogsCard;
+export default AllBlogsCard;
