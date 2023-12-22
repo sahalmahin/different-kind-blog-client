@@ -1,10 +1,10 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const BlogDetail = () => {
 
     const blog = useLoaderData();
 
-    const { title, image, short_description } = blog;
+    const { title, image, short_description, _id } = blog;
 
     return (
         <div className="card bg-base-100 border shadow-xl">
@@ -14,7 +14,9 @@ const BlogDetail = () => {
                     <p>{short_description}</p>
                 </div>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-secondary font-bold">Update</button>
+                    <Link to={`/updateBlog/${_id}`}>
+                        <button className="btn btn-outline">Details</button>
+                    </Link>
                 </div>
             </div>
             <figure><img className="w-full" src={image} alt="Shoes" /></figure>
