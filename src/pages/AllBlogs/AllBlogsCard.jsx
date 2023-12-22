@@ -3,7 +3,7 @@ import { ToastContainer, toast } from "react-toastify";
 
 const AllBlogsCard = ({ allBlog }) => {
 
-    const { title, image, short_description, category,_id } = allBlog;
+    const { title, image, short_description, category, _id } = allBlog;
 
     const handleAddBlog = () => {
         fetch('http://localhost:5000/singleBlog', {
