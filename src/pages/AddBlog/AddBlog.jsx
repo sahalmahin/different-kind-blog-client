@@ -1,3 +1,5 @@
+import { ToastContainer, toast } from "react-toastify";
+
 const AddBlog = () => {
 
     const handleSubmit = event => {
@@ -21,6 +23,7 @@ const AddBlog = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data)
+                toast('Blog Added Successfully');
             })
     }
 
@@ -61,6 +64,7 @@ const AddBlog = () => {
                     <input className="btn btn-primary btn-block" type="submit" value="Submit Blog" />
                 </div>
             </form>
+            <ToastContainer />
         </div>
     );
 };
