@@ -24,7 +24,7 @@ const BlogsCard = ({ blog }) => {
     }
 
     return (
-        <div className="card w-96 bg-base-100 shadow-xl">
+        <div className="card w-96 bg-base-100 shadow-xl mb-10">
             <figure><img className="w-full h-44" src={image} /></figure>
             <div className="card-body">
                 <h2 className="card-title">

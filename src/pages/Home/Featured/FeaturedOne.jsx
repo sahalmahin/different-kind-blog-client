@@ -2,7 +2,7 @@ const FeaturedOne = () => {
     return (
         <div>
             <h3 className="text-5xl font-bold text-center mb-10">See This Reviewing Blog</h3>
-            <div className="grid grid-cols-3 mx-auto mb-36">
+            <div className="grid grid-cols-3 mx-auto mb-36 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-3 gap-4">
                 <div className="card w-96 bg-base-100 shadow-xl image-full mb-10">
                     <figure><img src="https://i.postimg.cc/fWV0sdzS/tales.png" alt="Shoes" /></figure>
                     <div className="card-body">
