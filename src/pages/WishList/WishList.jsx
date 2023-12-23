@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import WishListRow from "./WishListRow";
+import Swal from 'sweetalert2'
 
 const WishList = () => {
 
@@ -16,21 +17,34 @@ const WishList = () => {
     }, [])
 
     const handleDelete = id => {
-        const proceed = confirm("are you want to delete?");
-        if (proceed) {
-            fetch(`http://localhost:5000/singleBlog/${id}`, {
-                method: 'DELETE'
-            })
-                .then(res => res.json())
-                .then(data => {
-                    console.log(data);
-                    if (data.deletedCount > 0) {
-                        alert('deleted successfully');
-                        const remaining = singleBlog.filter(blog => blog._id !== id);
-                        setSingleBlog(remaining);
-                    }
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:5000/singleBlog/${id}`, {
+                    method: 'DELETE'
                 })
-        }
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+                            const remaining = singleBlog.filter(blog => blog._id !== id);
+                            setSingleBlog(remaining);
+                        }
+                    })
+            }
+        });
     }
 
     return (
