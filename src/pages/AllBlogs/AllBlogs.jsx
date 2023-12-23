@@ -13,7 +13,7 @@ const AllBlogs = () => {
 
     return (
         <div>
-            <h4 className="text-8xl text-center">Here is our all Blogs</h4>
+            <h4 className="text-8xl text-center">Here is our all Blogs: {allBlogs.length}</h4>
             <div className="grid grid-cols-3">
                 {
                     allBlogs.map(allBlog => <AllBlogsCard key={allBlog._id} allBlog={allBlog}></AllBlogsCard>)

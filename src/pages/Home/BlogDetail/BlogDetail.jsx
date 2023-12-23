@@ -4,14 +4,15 @@ const BlogDetail = () => {
 
     const blog = useLoaderData();
 
-    const { title, image, short_description, _id } = blog;
+    const { title, image, short_description, long_description, _id } = blog;
 
     return (
         <div className="card bg-base-100 border shadow-xl">
             <div className="card-body">
                 <div>
                     <h2 className="card-title">{title}</h2>
-                    <p>{short_description}</p>
+                    <p className="font-bold">{short_description}</p>
+                    <p>{long_description}</p>
                 </div>
                 <div className="card-actions justify-end">
                     <Link to={`/updateBlog/${_id}`}>
