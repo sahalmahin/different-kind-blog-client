@@ -9,6 +9,7 @@ import FeaturedBlogs from "../pages/FeaturedBlogs/FeaturedBlogs";
 import WishList from "../pages/WishList/WishList";
 import BlogDetail from "../pages/Home/BlogDetail/BlogDetail";
 import UpdateBlog from "../pages/Home/UpdateBlog/UpdateBlog";
+import PrivateRoute from "./PrivateRoute";
 // import Error from "../Layout/Error";
 
 const router = createBrowserRouter([
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/wishList',
-        element: <WishList></WishList>
+        element: <PrivateRoute><WishList></WishList></PrivateRoute>
       },
       {
         path: '/login',

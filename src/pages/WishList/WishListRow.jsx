@@ -1,9 +1,7 @@
-import React from 'react';
+const WishListRow = ({ blog, handleDelete }) => {
 
-const WishListRow = ({ blog }) => {
+    const { image, short_description, title, category, _id } = blog;
 
-    const { image, short_description, title, category } = blog;
-    
     return (
         <tr>
             <th>
@@ -15,7 +13,6 @@ const WishListRow = ({ blog }) => {
                 <div className="avatar">
                     <div className="rounded w-24 h-24">
                         <img src={image} alt="" />
-                        {/* {img && <img src={img} alt="" />} */}
                     </div>
                 </div>
             </td>
@@ -27,6 +24,9 @@ const WishListRow = ({ blog }) => {
             </td>
             <td>
                 {category}
+            </td>
+            <td>
+                <button className="btn btn-secondary font-bold">Details</button>
             </td>
         </tr>
     );

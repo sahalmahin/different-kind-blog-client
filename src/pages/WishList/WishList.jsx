@@ -1,6 +1,3 @@
-// import { useContext } from "react";
-// import { AuthContext } from "../../providers/AuthProvider";
-
 import { useEffect, useState } from "react";
 import WishListRow from "./WishListRow";
 
@@ -9,6 +6,7 @@ const WishList = () => {
     // const { user } = useContext(AuthContext);
     const [singleBlog, setSingleBlog] = useState([]);
 
+    // const url = `http://localhost:5000/singleBlog?email=${user?.email}`;
     const url = 'http://localhost:5000/singleBlog';
 
     useEffect(() => {
@@ -16,6 +14,25 @@ const WishList = () => {
             .then(res => res.json())
             .then(data => setSingleBlog(data))
     }, [])
+
+    const handleDelete = id => {
+        const proceed = confirm("are you want to delete?");
+        if (proceed) {
+            fetch(`http://localhost:5000/singleBlog/${id}`, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.deletedCount > 0) {
+                        alert('deleted successfully');
+                        const remaining = singleBlog.filter(blog => blog._id !== id);
+                        setSingleBlog(remaining);
+                    }
+                })
+        }
+    }
+
     return (
         <div>
             <h3 className="text-4xl">Your Blog is Here : {singleBlog.length}</h3>
@@ -39,6 +56,7 @@ const WishList = () => {
                             singleBlog.map(blog => <WishListRow
                                 key={blog._id}
                                 blog={blog}
+                                handleDelete={handleDelete}
                             ></WishListRow>)
                         }
                     </tbody>

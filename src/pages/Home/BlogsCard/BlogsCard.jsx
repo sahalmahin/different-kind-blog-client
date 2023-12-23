@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const BlogsCard = ({ blog }) => {
 
-    const { title, image, short_description, category, _id } = blog;
+    const { title, image, short_description, category} = blog;
 
     const handleAddBlog = () => {
         fetch('http://localhost:5000/singleBlog', {
@@ -33,7 +33,7 @@ const BlogsCard = ({ blog }) => {
                 <p>{short_description}</p>
                 <p>{category}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/blogDetail/${_id}`}>
+                    <Link to={`/blogDetail/${blog._id}`}>
                         <button className="btn btn-outline">Details</button>
                     </Link>
                     <button onClick={handleAddBlog} className="btn btn-outline">Wishlist</button>

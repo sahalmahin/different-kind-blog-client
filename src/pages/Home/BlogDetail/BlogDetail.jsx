@@ -15,7 +15,7 @@ const BlogDetail = () => {
                 </div>
                 <div className="card-actions justify-end">
                     <Link to={`/updateBlog/${_id}`}>
-                        <button className="btn btn-outline">Details</button>
+                        <button className="btn btn-outline">Update</button>
                     </Link>
                 </div>
             </div>
