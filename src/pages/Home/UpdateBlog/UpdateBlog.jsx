@@ -5,7 +5,9 @@ import 'react-toastify/dist/ReactToastify.css';
 const UpdateBlog = () => {
 
     const blog = useLoaderData();
-    const { title, image, short_description, _id, category } = blog;
+    // const { title, image, short_description, _id, category } = blog;
+    const { title, image, description, longDescription, category, _id } = blog;
+
 
     const handleAddBlog = event => {
         event.preventDefault();
@@ -46,12 +48,6 @@ const UpdateBlog = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
-                                <span className="label-text">Description</span>
-                            </label>
-                            <input type="text" name="description" defaultValue={short_description} className="input input-bordered" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
                                 <span className="label-text">Category</span>
                             </label>
                             <input type="text" name="category" defaultValue={category} className="input input-bordered" required />
@@ -61,6 +57,18 @@ const UpdateBlog = () => {
                                 <span className="label-text">Image Link</span>
                             </label>
                             <input type="link" name="image" defaultValue={image} className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Description</span>
+                            </label>
+                            <input type="text" name="description" defaultValue={description} className="input input-bordered" required />
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Long Description</span>
+                            </label>
+                            <input type="text" name="description" defaultValue={longDescription} className="input input-bordered" required />
                         </div>
                     </div>
                     <div className="form-control mt-6">

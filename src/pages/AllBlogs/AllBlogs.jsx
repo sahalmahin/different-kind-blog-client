@@ -1,15 +1,10 @@
 import { useEffect, useState } from "react";
 import AllBlogsCard from "./AllBlogsCard";
+import { useLoaderData } from "react-router-dom";
 
 const AllBlogs = () => {
 
-    const [allBlogs, setAllBlogs] = useState([]);
-
-    useEffect(() => {
-        fetch('http://localhost:5000/singleBlog')
-            .then(res => res.json())
-            .then(data => setAllBlogs(data))
-    }, [])
+    const allBlogs = useLoaderData();
 
     return (
         <div>

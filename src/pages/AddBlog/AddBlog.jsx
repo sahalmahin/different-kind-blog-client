@@ -13,7 +13,7 @@ const AddBlog = () => {
         const blog = { title, category, image, description, longDescription };
         console.log(blog);
 
-        fetch('http://localhost:5000/singleBlog',{
+        fetch('http://localhost:5000/addBlog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
