@@ -10,7 +10,7 @@
     <li>You can comment on other blogs.</li>
     <li>Finally you can delete the blog if you want.</li>
 
-📫 Live Site Url :
+📫 Live Site Url : https://blog-site-c23c3.web.app/
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
