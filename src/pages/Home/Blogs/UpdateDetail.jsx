@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 const UpdateDetail = () => {
 
     const blog = useLoaderData();
-    // const { title, image, short_description, _id, category } = blog;
     const { title, image, short_description, long_description, category, _id } = blog;
 
     const handleUpdateBlog = event => {

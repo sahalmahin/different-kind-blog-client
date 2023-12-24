@@ -1,4 +1,3 @@
-
 const Banner = () => {
     return (
         <div className="carousel w-full h-[600px]">

@@ -5,7 +5,6 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
 
-    // const { signIn } = useContext(AuthContext);
     const { signIn } = useAuth();
 
     const handleLogin = e => {

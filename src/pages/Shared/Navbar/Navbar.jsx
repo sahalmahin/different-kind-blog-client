@@ -1,12 +1,9 @@
 import { Link } from "react-router-dom"
 import { FaBlog } from "react-icons/fa";
-// import { IoIosSearch } from "react-icons/io";
-// import { IoBagHandleOutline } from "react-icons/io5";
 import useAuth from "../../../Hooks/useAuth";
 
 const Navbar = () => {
 
-    // const { user, logout } = useContext(AuthContext);
     const { user, logout, googleSignIn } = useAuth();
 
     const handleGoogleSignIn = () => {
@@ -62,9 +59,6 @@ const Navbar = () => {
                 {
                     user?.email ?
                         <>
-                            <div>
-                                {/* <p className="font-bold border p-1 rounded-lg">{user.email}</p> */}
-                            </div>
                             <div>
                                 <img className="rounded-full w-12 h-12 ml-1" alt="" src='https://rb.gy/cwptut' />
                             </div>
