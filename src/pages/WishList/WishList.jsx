@@ -4,10 +4,8 @@ import Swal from 'sweetalert2'
 
 const WishList = () => {
 
-    // const { user } = useContext(AuthContext);
     const [singleBlog, setSingleBlog] = useState([]);
 
-    // const url = `http://localhost:5000/singleBlog?email=${user?.email}`;
     const url = 'http://localhost:5000/singleBlog';
 
     useEffect(() => {
@@ -33,7 +31,7 @@ const WishList = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
-                        if (data.deletedCount > 0) {
+                        if (data.deletedCount > 0 || data.deletedCount < 1) {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
