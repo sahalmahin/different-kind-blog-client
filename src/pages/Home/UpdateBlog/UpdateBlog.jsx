@@ -8,23 +8,23 @@ const UpdateBlog = () => {
     // const { title, image, short_description, _id, category } = blog;
     const { title, image, description, longDescription, category, _id } = blog;
 
-
-    const handleAddBlog = event => {
+    const handleUpdateBlog = event => {
         event.preventDefault();
         const form = event.target;
         const title = form.title.value;
-        const description = form.description.value;
         const category = form.category.value;
         const image = form.image.value;
-        const added = { title, description, category, service_id: _id, image };
-        console.log(added);
+        const description = form.description.value;
+        const longDescription = form.longDescription.value;
+        const updatedBlog = { title, description, category, longDescription, image };
+        console.log(updatedBlog);
 
         fetch('http://localhost:5000/singleBlog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(added)
+            body: JSON.stringify(updatedBlog)
         })
             .then(res => res.json())
             .then(data => {
@@ -37,8 +37,8 @@ const UpdateBlog = () => {
 
     return (
         <div>
-            <div className="card shrink-0 w-full  shadow-2xl bg-base-100">
-                <form onSubmit={handleAddBlog} className="card-body">
+            <div className="card shrink-0 w-full shadow-2xl bg-base-100">
+                <form onSubmit={handleUpdateBlog} className="card-body">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="form-control">
                             <label className="label">
@@ -64,12 +64,12 @@ const UpdateBlog = () => {
                             </label>
                             <input type="text" name="description" defaultValue={description} className="input input-bordered" required />
                         </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Long Description</span>
-                            </label>
-                            <input type="text" name="description" defaultValue={longDescription} className="input input-bordered" required />
-                        </div>
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text">Long Description</span>
+                        </label>
+                        <input type="text" name="longDescription" defaultValue={longDescription} className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
                         <input className="btn btn-primary btn-block" type="submit" value="Update Blog" />
