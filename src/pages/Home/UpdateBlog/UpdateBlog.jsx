@@ -19,8 +19,8 @@ const UpdateBlog = () => {
         const updatedBlog = { title, description, category, longDescription, image };
         console.log(updatedBlog);
 
-        fetch('http://localhost:5000/singleBlog', {
-            method: 'POST',
+        fetch(`http://localhost:5000/addBlog/${_id}`, {
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
@@ -29,7 +29,7 @@ const UpdateBlog = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if (data.insertedId) {
+                if (data.modifiedCount > 0) {
                     toast('Updated Successfully');
                 }
             })

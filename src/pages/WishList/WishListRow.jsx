@@ -1,6 +1,6 @@
 const WishListRow = ({ blog, handleDelete }) => {
 
-    const { image, short_description, title, category, _id } = blog;
+    const { image, short_description, description, title, category, _id } = blog;
 
     return (
         <tr>
@@ -20,7 +20,7 @@ const WishListRow = ({ blog, handleDelete }) => {
                 {title}
             </td>
             <td>
-                {short_description}
+                {short_description}{description}
             </td>
             <td>
                 {category}

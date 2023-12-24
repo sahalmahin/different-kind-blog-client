@@ -5,22 +5,22 @@ const AllBlogsCard = ({ allBlog }) => {
 
     const { title, image, description, longDescription, category, _id } = allBlog;
 
-    // const handleAddBlog = () => {
-    //     fetch('http://localhost:5000/singleBlog', {
-    //         method: 'POST',
-    //         headers: {
-    //             'content-type': 'application/json'
-    //         },
-    //         body: JSON.stringify(allBlog)
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             if (data.insertedId) {
-    //                 toast('Added Successfully');
-    //             }
-    //         })
-    // }
+    const handleAddBlog = () => {
+        fetch('http://localhost:5000/singleBlog', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(allBlog)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    toast('Added Successfully');
+                }
+            })
+    }
 
     return (
         <div className="card w-[400px] mb-10 bg-pink-100 shadow-xl">
@@ -38,7 +38,7 @@ const AllBlogsCard = ({ allBlog }) => {
                     <Link to={`/blogDetail/${_id}`}>
                         <button className="btn btn-outline">Details</button>
                     </Link>
-                    <button  className="btn btn-outline">Wishlist</button>
+                    <button onClick={handleAddBlog} className="btn btn-outline">Wishlist</button>
                 </div>
             </div>
             <ToastContainer />
