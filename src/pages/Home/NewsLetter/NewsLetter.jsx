@@ -9,7 +9,7 @@ const NewsLetter = () => {
         const email = form.email.value;
         console.log(email);
         if (email) {
-         toast('Thank you for subscribing to our newsletter');
+         toast('Thank you for subscribing to our site');
          form.reset();
         }
     }

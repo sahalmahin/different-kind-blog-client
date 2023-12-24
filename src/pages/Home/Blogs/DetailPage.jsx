@@ -1,20 +1,42 @@
+import { useEffect, useState } from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import Comment from "./Comment";
 
 const DetailPage = () => {
-    const blog = useLoaderData();
 
-    const { title, image, short_description, long_description, category,_id } = blog;
+    const blog = useLoaderData();
+    const { title, image, short_description, long_description, category, _id } = blog;
+    const [comments, setComment] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => setComment(data))
+    }, [])
 
     const handleSubmit = e => {
         e.preventDefault();
         const form = event.target;
         const text = form.text.value;
-        console.log(text);
-        if (text) {
-            toast('Done');
-            form.reset();
-        }
+        const comment = { text };
+        console.log(comment);
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(comment)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    toast('comment added');
+                    form.reset();
+                }
+            })
+
     }
 
     return (
@@ -49,6 +71,12 @@ const DetailPage = () => {
                 </div>
             </div>
             <ToastContainer />
+            <p className="font-bold text-2xl">Comment Section :</p>
+            <div className="text-xl font-semibold text-pink-700">
+            {
+                comments.map(comment => <Comment key={comment._id} comment={comment}></Comment>)
+            }
+            </div>
         </div>
     );
 };
