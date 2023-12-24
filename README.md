@@ -3,14 +3,14 @@
 
 <img alt="coding" width="400" align="right" src="https://i.postimg.cc/bvf8mKBY/blog.png"/>
 
-  <li>Some Features of our site :</li>
+  Some Features of our site :
     <li>You can checkout our blog if you sign in or login.</li>
     <li>You can add your blog to our page if you want.</li>
     <li>You can also update.</li>
     <li>You can comment on other blogs.</li>
     <li>Finally you can delete the blog if you want</li>
 
-<li>📫 How to reach me sahalmahin009@gmail.com</li>
+📫 Live Site Url :
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
