@@ -6,7 +6,7 @@ const WishList = () => {
 
     const [singleBlog, setSingleBlog] = useState([]);
 
-    const url = 'http://localhost:5000/singleBlog';
+    const url = 'https://reset-assignment-11-server-v2.vercel.app/singleBlog';
 
     useEffect(() => {
         fetch(url)
@@ -25,7 +25,7 @@ const WishList = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/singleBlog/${id}`, {
+                fetch(`https://reset-assignment-11-server-v2.vercel.app/singleBlog/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

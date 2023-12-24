@@ -6,7 +6,7 @@ const Blogs = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/blogs')
+        fetch('https://reset-assignment-11-server-v2.vercel.app/blogs')
             .then(res => res.json())
             .then(data => setBlogs(data))
     }, [])

@@ -10,7 +10,7 @@ const DetailPage = () => {
     const [comments, setComment] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
+        fetch('https://reset-assignment-11-server-v2.vercel.app/users')
             .then(res => res.json())
             .then(data => setComment(data))
     }, [])
@@ -21,7 +21,7 @@ const DetailPage = () => {
         const text = form.text.value;
         const comment = { text };
         console.log(comment);
-        fetch('http://localhost:5000/users', {
+        fetch('https://reset-assignment-11-server-v2.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

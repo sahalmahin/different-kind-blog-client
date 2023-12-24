@@ -13,7 +13,7 @@ const AddBlog = () => {
         const blog = { title, category, image, description, longDescription };
         console.log(blog);
 
-        fetch('http://localhost:5000/addBlog', {
+        fetch('https://reset-assignment-11-server-v2.vercel.app/addBlog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

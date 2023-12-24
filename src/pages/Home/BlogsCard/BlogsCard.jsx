@@ -7,7 +7,7 @@ const BlogsCard = ({ blog }) => {
     const { title, image, short_description, category} = blog;
 
     const handleAddBlog = () => {
-        fetch('http://localhost:5000/singleBlog', {
+        fetch('https://reset-assignment-11-server-v2.vercel.app/singleBlog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

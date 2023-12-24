@@ -27,31 +27,31 @@ const router = createBrowserRouter([
       {
         path: '/detailPage/:id',
         element: <PrivateRoute><DetailPage></DetailPage></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)
+        loader: ({ params }) => fetch(`https://reset-assignment-11-server-v2.vercel.app/blogs/${params.id}`)
       },
       {
         path: '/updateDetail/:id',
         element: <PrivateRoute><UpdateDetail></UpdateDetail></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)
+        loader: ({ params }) => fetch(`https://reset-assignment-11-server-v2.vercel.app/blogs/${params.id}`)
       },
       {
         path: '/addBlog',
-        element: <AddBlog></AddBlog>
+        element: <PrivateRoute><AddBlog></AddBlog></PrivateRoute>
       },
       {
         path: '/allBlogs',
-        element: <PrivateRoute><AllBlogs></AllBlogs></PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/addBlog')
+        element: <AllBlogs></AllBlogs>,
+        loader: () => fetch('https://reset-assignment-11-server-v2.vercel.app/addBlog')
       },
       {
         path: '/blogDetail/:id',
         element: <PrivateRoute><BlogDetail></BlogDetail></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addBlog/${params.id}`)
+        loader: ({ params }) => fetch(`https://reset-assignment-11-server-v2.vercel.app/addBlog/${params.id}`)
       },
       {
         path: '/updateBlog/:id',
         element: <PrivateRoute><UpdateBlog></UpdateBlog></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:5000/addBlog/${params.id}`)
+        loader: ({ params }) => fetch(`https://reset-assignment-11-server-v2.vercel.app/addBlog/${params.id}`)
       },
       {
         path: '/featuredBlogs',
