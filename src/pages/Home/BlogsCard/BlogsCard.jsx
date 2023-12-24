@@ -33,7 +33,7 @@ const BlogsCard = ({ blog }) => {
                 <p>{short_description}</p>
                 <p>{category}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/blogDetail/${blog._id}`}>
+                    <Link to={`/detailPage/${blog._id}`}>
                         <button className="btn btn-outline">Details</button>
                     </Link>
                     <button onClick={handleAddBlog} className="btn btn-outline">Wishlist</button>
