@@ -11,6 +11,7 @@ import BlogDetail from "../pages/Home/BlogDetail/BlogDetail";
 import UpdateBlog from "../pages/Home/UpdateBlog/UpdateBlog";
 import PrivateRoute from "./PrivateRoute";
 import DetailPage from "../pages/Home/Blogs/DetailPage";
+import UpdateDetail from "../pages/Home/Blogs/UpdateDetail";
 // import Error from "../Layout/Error";
 
 const router = createBrowserRouter([
@@ -25,12 +26,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/detailPage/:id',
-        element: <DetailPage></DetailPage>,
+        element: <PrivateRoute><DetailPage></DetailPage></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)
       },
       {
-        path: '/detailPage/:id',
-        element: <UpdateDetail></UpdateDetail>,
+        path: '/updateDetail/:id',
+        element: <PrivateRoute><UpdateDetail></UpdateDetail></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/blogs/${params.id}`)
       },
       {
@@ -39,17 +40,17 @@ const router = createBrowserRouter([
       },
       {
         path: '/allBlogs',
-        element: <AllBlogs></AllBlogs>,
+        element: <PrivateRoute><AllBlogs></AllBlogs></PrivateRoute>,
         loader: () => fetch('http://localhost:5000/addBlog')
       },
       {
         path: '/blogDetail/:id',
-        element: <BlogDetail></BlogDetail>,
+        element: <PrivateRoute><BlogDetail></BlogDetail></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/addBlog/${params.id}`)
       },
       {
         path: '/updateBlog/:id',
-        element: <UpdateBlog></UpdateBlog>,
+        element: <PrivateRoute><UpdateBlog></UpdateBlog></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:5000/addBlog/${params.id}`)
       },
       {
