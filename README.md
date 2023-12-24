@@ -8,7 +8,7 @@
     <li>You can add your blog to our page if you want.</li>
     <li>You can also update.</li>
     <li>You can comment on other blogs.</li>
-    <li>Finally you can delete the blog if you want</li>
+    <li>Finally you can delete the blog if you want.</li>
 
 📫 Live Site Url :
 
