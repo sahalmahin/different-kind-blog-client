@@ -1,9 +1,16 @@
 <h1 align="center">Hi 👋, I'm Sahal Mahin</h1>
-<h3 align="center">I am on track of my web developing journey with programming hero</h3>
+<h3 align="center">I have created a website related to my blog</h3>
 
-<img alt="coding" width="400" align="right" src="https://media.istockphoto.com/id/1350595566/photo/cyber-security-firewall-interface-protection-concept-businesswoman-protecting-herself-from.jpg?s=1024x1024&w=is&k=20&c=xPiZoZ35Hbvo4edrpWHQAD991IBnW_vNJYjhacDjp9g="/>
+<img alt="coding" width="400" align="right" src="https://i.postimg.cc/bvf8mKBY/blog.png"/>
 
-- 📫 How to reach me **sahalmahin009@gmail.com**
+  <li>Some Features of our site :</li>
+    <li>You can checkout our blog if you sign in or login.</li>
+    <li>You can add your blog to our page if you want.</li>
+    <li>You can also update.</li>
+    <li>You can comment on other blogs.</li>
+    <li>Finally you can delete the blog if you want</li>
+
+<li>📫 How to reach me sahalmahin009@gmail.com</li>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
