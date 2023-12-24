@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Sahal Mahin</h1>
-<h3 align="center">I have created a website related to my blog</h3>
+<h3 align="center">I have created a website related to my Blog</h3>
 
 <img alt="coding" width="400" align="right" src="https://i.postimg.cc/bvf8mKBY/blog.png"/>
 
