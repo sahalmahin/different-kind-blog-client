@@ -4,15 +4,17 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const BlogsCard = ({ blog }) => {
 
-    const { title, image, short_description, category} = blog;
+    const { title, image, short_description, category, _id } = blog;
+
+    const newBlog = { title, image, short_description, category };
 
     const handleAddBlog = () => {
         fetch('https://reset-assignment-11-server-v2.vercel.app/singleBlog', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify(blog)
+            body: JSON.stringify(newBlog)
         })
             .then(res => res.json())
             .then(data => {
@@ -33,7 +35,7 @@ const BlogsCard = ({ blog }) => {
                 <p>{short_description}</p>
                 <p>{category}</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/detailPage/${blog._id}`}>
+                    <Link to={`/detailPage/${_id}`}>
                         <button className="btn btn-outline">Details</button>
                     </Link>
                     <button onClick={handleAddBlog} className="btn btn-outline">Wishlist</button>

@@ -5,13 +5,15 @@ const AllBlogsCard = ({ allBlog }) => {
 
     const { title, image, description, longDescription, category, _id } = allBlog;
 
+    const newBlog = { title, image, description, longDescription, category };
+
     const handleAddBlog = () => {
         fetch('https://reset-assignment-11-server-v2.vercel.app/singleBlog', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(allBlog)
+            body: JSON.stringify(newBlog)
         })
             .then(res => res.json())
             .then(data => {

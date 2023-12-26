@@ -31,7 +31,7 @@ const WishList = () => {
                     .then(res => res.json())
                     .then(data => {
                         console.log(data);
-                        if (data.deletedCount > 0 || data.deletedCount < 1) {
+                        if (data.deletedCount > 0) {
                             Swal.fire({
                                 title: "Deleted!",
                                 text: "Your file has been deleted.",
